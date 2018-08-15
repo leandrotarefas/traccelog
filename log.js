@@ -60,7 +60,7 @@ module.exports = {
     logWrite: function (id, content) {
         logger.info({
                    id: id
-            ,    type: 'Info'
+            ,    type: 'Info____'
             ,    Date: now
             , message: JSON.stringify(content)
         });
