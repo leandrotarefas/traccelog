@@ -5,6 +5,7 @@
   "engines": {
     "node": ">=6.11.4"
   },
+  "main": "log.js",
   "scripts": {
     "test": "mocha --reporter spec",
     "cover": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
