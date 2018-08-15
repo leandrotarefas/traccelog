@@ -1,9 +1,9 @@
-# tracelog
+# traccelog
 Rastreabilidade de logs através de um {ID} único
 
 ## Installation
 
-  `npm install @leandrotarefas/tracelog`
+  `npm install traccelog`
 
 ## Usage
 
