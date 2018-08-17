@@ -7,7 +7,6 @@ const fs = require('fs');
 require('winston-daily-rotate-file');
 
 const logDirectory = path.join('./logs');
-fs.existsSync(logDirectory) || fs.mkdirSync(logDirectory);
 
 const logger = new winston.Logger({
     transports: [
@@ -27,5 +26,11 @@ const logger = new winston.Logger({
     exitOnError: false
 });
 
-module.exports = logger;
+if(fs.existsSync(logDirectory) || fs.mkdirSync(logDirectory)){
+    module.exports = logger;
+}else{
+    return new console.error("Não foi possivel criar diretorio de logs!");    
+}
+
+
 
