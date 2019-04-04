@@ -7,9 +7,11 @@ Rastreabilidade de logs através de um {ID} único
 
 ## Usage
 
-    const logger = require('@leandrotarefas/tracelog`);
+### Salvando o log em um diretorio "Default" .logs/
 
-    logger.logWrite("12345","Testando funcao Info Write!",200);  
+    const logger = require('traccelog`);
+
+    logger.logWrite("12345","Testando funcao Info Write!");  
     
     output: 2018-08-14T19:40:36.597Z - info:  id=12345, type=Info, Date=2018-08-14T19:40:36.492Z, message="Testando funcao Info Write!"
     
@@ -22,6 +24,21 @@ Rastreabilidade de logs através de um {ID} único
      
     output: 2018-08-14T19:41:38.813Z - info:  id=123456, type=Response, Date=2018-08-14T19:41:38.716Z
     ,body={"data":{"app":"traceLog reponse"}}
+   
+
+### Salvando o log em um diretorio "Especifico" /data/{xyz...}/ || d:/data/{xyz}/
+  
+    const path = 'C:/log2/'
+    const id = "123456"
+    const content = "{teste:'abcde', valor=1.000}"
+
+    loggerPath.logPathError(path, id, content);
+    loggerPath.logInfoRequest(path, id, content);
+    loggerPath.logInfoResponse(path, id, content);
+    loggerPath.logWrite(path, id, content);
+    
+    A saida é a mesma que a informado no modelo "Default"
+    
    
 
 ## Tests
