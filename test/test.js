@@ -64,7 +64,7 @@ describe('#Testar geracao de logs rastreaveis na aplicacao', function() {
 
     describe('testar a função log Write', function() {
 
-        logger.logWrite("12345",{data:{app:"tracceLog Write"}},200);      
+        logger.logWrite("12345",{data:{app:"tracceLog Write"}});      
                
         it('Verificar propriedade (datetime) da funcao Write', function() {              
             return getLine(1, "info:").then(getDataDeLog).then((dataDoLog)=>{
@@ -161,7 +161,7 @@ describe('#Testar geracao de logs rastreaveis na aplicacao', function() {
 
     describe('testar a função log Error', function() {
 
-        logger.logError("12345",{data:{app:"tracceLog Error"}},200);      
+        logger.logError("12345",{data:{app:"tracceLog Error"}});      
                
         it('Verificar propriedade (datetime) da funcao Error', function() {              
             return getLine(4, "error:").then(getDataDeLog).then((dataDoLog)=>{

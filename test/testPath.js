@@ -69,9 +69,10 @@ describe('#Testar geracao de logs rastreaveis na aplicacao', function() {
 
     describe('testar a função log Write', function() {
 
-        logger.logPathWrite(pathValue,"12345",{data:{app:"tracceLog Write"}});      
+        logger.logPathWrite(pathValue,"12345",{data:{app:'tracceLog Write'}});      
                
-        it('Verificar propriedade (datetime) da funcao Write', function() {              
+        it('Verificar propriedade (datetime) da funcao Write', 
+            function() {              
             return getLine(1, "info:").then(getDataDeLog).then((dataDoLog)=>{
                 expect(hoje).to.equal(dataDoLog);                     
             });              
@@ -98,7 +99,6 @@ describe('#Testar geracao de logs rastreaveis na aplicacao', function() {
         });
 
     });   
-
 
     describe('testar a função log Request', function() {
 

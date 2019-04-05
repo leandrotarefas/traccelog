@@ -12,8 +12,8 @@ module.exports = {
      * @param {string} id para rastrear
      * @param {string} message descricao
      */
-    logError: function (id, content) {
-        logger.error({
+    logError: function (id, content, loggerConfig) {
+        (loggerConfig?loggerConfig:logger).error({
               id: id
             , type: 'Error'
             , Date: now
@@ -27,8 +27,8 @@ module.exports = {
      * @param {string} id para rastrear
      * @param {string} content conteudo do request
      */
-    logInfoRequest: function (id, content) {
-        logger.info({
+    logInfoRequest: function (id, content, loggerConfig) {
+        (loggerConfig?loggerConfig:logger).info({
                 id: id
             , type: 'Request'
             , Date: now
@@ -41,8 +41,8 @@ module.exports = {
      * @param {string} id para rastrear
      * @param {string} content conteudo do request
      */
-    logInfoResponse: function (id, content) {
-        logger.info({
+    logInfoResponse: function (id, content, loggerConfig) {
+        (loggerConfig?loggerConfig:logger).info({
                 id: id
             , type: 'Response'
             , Date: now
@@ -57,8 +57,8 @@ module.exports = {
      * @param {string} id para rastrear
      * @param {string} message descricao
      */
-    logWrite: function (id, content) {
-        logger.info({
+    logWrite: function (id, content, loggerConfig) {
+        (loggerConfig?loggerConfig:logger).info({
                    id: id
             ,    type: 'Info'
             ,    Date: now
