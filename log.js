@@ -1,5 +1,6 @@
 
 const logger = require("./log_config");
+const loggerPath = require("./logPath");
 
 'use strict';
 
@@ -64,6 +65,23 @@ module.exports = {
             ,    Date: now
             , message: JSON.stringify(content)
         });
-    }
+    },
+
+
+    logPathRequest: function (path, id, content) {
+        loggerPath.logPathRequest(path, id, content)
+    },
+
+    logPathResponse: function (path, id, content) {
+        loggerPath.logPathResponse(path, id, content)
+    },
+
+    logPathError: function (path, id, content) {
+        loggerPath.logPathError(path, id, content)
+    },
+
+    logPathWrite: function (path, id, content) {
+        loggerPath.logPathWrite(path, id, content)
+    } 
 
 };
