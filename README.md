@@ -33,9 +33,9 @@ Rastreabilidade de logs através de um {ID} único
     const content = "{teste:'abcde', valor=1.000}"
 
     loggerPath.logPathError(path, id, content);
-    loggerPath.logInfoRequest(path, id, content);
-    loggerPath.logInfoResponse(path, id, content);
-    loggerPath.logWrite(path, id, content);
+    loggerPath.logPathInfoRequest(path, id, content);
+    loggerPath.logPathInfoResponse(path, id, content);
+    loggerPath.logPathWrite(path, id, content);
     
     A saida é a mesma que a informado no modelo "Default"
     
