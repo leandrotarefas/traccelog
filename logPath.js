@@ -34,9 +34,6 @@ var configLogFolder = function (path, logType, id, content) {
 
     const fs = require('fs');
 
-    fs.existsSync(path) || fs.mkdirSync(path)
-
-
     const loggerConfig = new winston.Logger({
         transports: [
 
